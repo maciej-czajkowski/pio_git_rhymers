@@ -1,9 +1,9 @@
 package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
-    private int MAX_ARRAY = 12;
-    private int NEGATIVE_ONE = -1;
-    private int MAX_VALUE = 11;
+    private final int MAX_ARRAY = 12;
+    private final int NEGATIVE_ONE = -1;
+    private final int MAX_VALUE = 11;
     private int[] numbers = new int[MAX_ARRAY];
 
     public int total = NEGATIVE_ONE;
