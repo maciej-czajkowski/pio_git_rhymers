@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class RhymersJUnitTest {
+    // wszystkie testy jednostkowe przechodza poprawnie
+    // komentarz w celu wykonania commita potwierdzajacego wykonanie podpunktu
 
     @Test
     public void testCountIn() {
