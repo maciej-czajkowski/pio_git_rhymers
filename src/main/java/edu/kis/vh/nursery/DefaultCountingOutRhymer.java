@@ -6,7 +6,7 @@ public class DefaultCountingOutRhymer {
     private final int MAX_VALUE = 11;
     private int[] numbers = new int[MAX_ARRAY];
 
-    public int total = NEGATIVE_ONE;
+    private int total = NEGATIVE_ONE;
 
     public void countIn(int in) {
         if (!isFull())
