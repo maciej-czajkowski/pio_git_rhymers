@@ -2,7 +2,7 @@ package edu.kis.vh.nursery;
 
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
-    private int totalRejected = 0;
+    private int totalRejected = 0; //TODO: not max value or reset mechanims for total rejected
 
     public int reportRejected() {
         return getTotalRejected();
@@ -10,7 +10,7 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     @Override
     public void countIn(int in) {
-        if (!callCheck() && in > peekaboo())
+        if (!callCheck() && in > peekaboo()) //TODO: this condition should be moved to a method and namer properly
             setTotalRejected(getTotalRejected() + 1);
         else
             super.countIn(in);
@@ -20,7 +20,7 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
         return totalRejected;
     }
 
-    public void setTotalRejected(int totalRejected) {
+    public void setTotalRejected(int totalRejected) { //TODO: should be private
         this.totalRejected = totalRejected;
     }
 }

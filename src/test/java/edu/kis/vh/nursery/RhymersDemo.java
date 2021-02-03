@@ -5,7 +5,8 @@ import edu.kis.vh.nursery.factory.Rhymersfactory;
 
 class RhymersDemo {
 
-    private static void testRhymers(Rhymersfactory factory){
+    private static void testRhymers(Rhymersfactory factory){ //TODO: demo does not show what this feature does,
+                                                             // add move print out information
 
         DefaultCountingOutRhymer[] rhymers = {factory.getStandardRhymer(), factory.getFalseRhymer(),
                factory.getHanoiRhymer()};
