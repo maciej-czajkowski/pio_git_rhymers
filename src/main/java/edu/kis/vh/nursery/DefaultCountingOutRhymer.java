@@ -4,9 +4,9 @@ public class DefaultCountingOutRhymer {
     private final int MAX_ARRAY = 12;
     private final int NEGATIVE_ONE = -1;
     private final int MAX_VALUE = 11;
-    private int[] numbers = new int[MAX_ARRAY];
+    private int[] numbers = new int[getMAX_ARRAY()];
 
-    private int total = NEGATIVE_ONE;
+    private int total = getNEGATIVE_ONE();
 
     public int getTotal() {
         return total;
@@ -14,27 +14,46 @@ public class DefaultCountingOutRhymer {
 
     public void countIn(int in) {
         if (!isFull())
-            numbers[++total] = in;
+            getNumbers()[++total] = in;
     }
 
     public boolean callCheck() {
-        return total == NEGATIVE_ONE;
+        return total == getNEGATIVE_ONE();
     }
 
     public boolean isFull() {
-        return total == MAX_VALUE;
+        return total == getMAX_VALUE();
     }
 
     protected int peekaboo() {
         if (callCheck())
-            return NEGATIVE_ONE;
-        return numbers[total];
+            return getNEGATIVE_ONE();
+        return getNumbers()[total];
     }
 
     public int countOut() {
         if (callCheck())
-            return NEGATIVE_ONE;
-        return numbers[total--];
+            return getNEGATIVE_ONE();
+        return getNumbers()[total--];
     }
 
+    public int getMAX_ARRAY() {
+        return MAX_ARRAY;
+    }
+
+    public int getNEGATIVE_ONE() {
+        return NEGATIVE_ONE;
+    }
+
+    public int getMAX_VALUE() {
+        return MAX_VALUE;
+    }
+
+    public int[] getNumbers() {
+        return numbers;
+    }
+
+    public void setNumbers(int[] numbers) {
+        this.numbers = numbers;
+    }
 }
